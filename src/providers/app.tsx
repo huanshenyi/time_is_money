@@ -3,6 +3,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
 
 import { Spinner, Button } from '@/components/Elements';
+import { Notifications } from '@/components/Notifications/Notifications';
 
 const ErrorFallback = () => {
   return (
@@ -29,6 +30,7 @@ export const AppProvider = ({ children }: AppProviderProps) => {
       }
     >
       <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <Notifications />
         <Router>{children}</Router>;
       </ErrorBoundary>
     </React.Suspense>

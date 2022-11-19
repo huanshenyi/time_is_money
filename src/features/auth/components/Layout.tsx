@@ -1,3 +1,5 @@
+import { Head } from '@/components/Head';
+
 type LayoutProps = {
   children: React.ReactNode;
   title: string;
@@ -6,6 +8,7 @@ type LayoutProps = {
 export const Layout = ({ children, title = 'title info' }: LayoutProps) => {
   return (
     <>
+      <Head title={title} description={title} />
       <div>
         <div className="relative min-h-screen grid ">
           <div className="flex flex-col sm:flex-row items-center md:items-start sm:justify-center md:justify-start flex-auto min-w-0 ">

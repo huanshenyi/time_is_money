@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { ErrorBoundary } from 'react-error-boundary';
+import { HelmetProvider } from 'react-helmet-async';
 
 import { Spinner, Button } from '@/components/Elements';
 import { Notifications } from '@/components/Notifications/Notifications';
@@ -30,8 +31,10 @@ export const AppProvider = ({ children }: AppProviderProps) => {
       }
     >
       <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <Notifications />
-        <Router>{children}</Router>;
+        <HelmetProvider>
+          <Notifications />
+          <Router>{children}</Router>;
+        </HelmetProvider>
       </ErrorBoundary>
     </React.Suspense>
   );

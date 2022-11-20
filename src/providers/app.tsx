@@ -33,7 +33,7 @@ export const AppProvider = ({ children }: AppProviderProps) => {
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <HelmetProvider>
           <Notifications />
-          <Router>{children}</Router>;
+          <Router>{children}</Router>
         </HelmetProvider>
       </ErrorBoundary>
     </React.Suspense>

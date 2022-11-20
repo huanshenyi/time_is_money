@@ -7,4 +7,8 @@ export const publicRoutes = [
     path: '/auth/*',
     element: <AuthRoutes />,
   },
+  {
+    path: '/',
+    element: <div>main</div>,
+  },
 ];

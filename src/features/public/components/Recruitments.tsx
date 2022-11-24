@@ -1,116 +1,112 @@
+import { Button } from '@/components/Elements/Button';
+
 export const Recruitments = () => {
+  const numList: number[] = [1, 2, 3, 4, 5, 6];
   return (
     <div className="space-y-2 md:space-y-6">
       <div className="card bg-base-200 shadow-xl">
         <div className="card-body">
-          <h1 className="md:text-3xl font-extrabold">Search</h1>
+          <h1 className="md:text-3xl font-extrabold">Recruitments</h1>
         </div>
       </div>
       <div className="card bg-base-200 shadow-xl">
         <div className="card-body">
-          <div className="form-control">
-            <div className="input-group">
-              <input type="text" placeholder="Search…" className="input input-bordered w-full" />
-              <button className="btn btn-square">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-6 w-6"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                  ></path>
-                </svg>
-              </button>
-            </div>
-          </div>
-          <div className="divider"></div>
-          <p className="text-right">4 result found in 0.2 seconds</p>
-          <div className="overflow-x-auto w-full">
-            <table className="table-normal w-full">
-              <tbody>
-                {/* <!-- row 1 --> */}
-                <tr>
-                  <td>
-                    <div className="flex items-center space-x-3">
-                      <div className="avatar">
-                        <div className="mask mask-squircle w-12 h-12">
-                          <a href="https://api.lorem.space/image/face?hash=92310"> </a>
+          <div className="flex flex-wrap -mx-4">
+            {numList.map((item) => {
+              return (
+                <div className="w-full md:w-1/2 lg:w-1/3 px-4" key={item}>
+                  <div className="max-w-[370px] mx-auto mb-10">
+                    <div className="rounded overflow-hidden mb-6">
+                      <img
+                        src="https://cdn.tailgrids.com/1.0/assets/images/blogs/blog-01/image-01.jpg"
+                        alt=""
+                        className="w-full"
+                      />
+                    </div>
+                    <div>
+                      <div className="flex justify-start gap-x-2 pb-2">
+                        <div className="badge">釣り</div>
+                        <div className="badge badge-primary">都内</div>
+                        <div className="badge badge-secondary">少人数</div>
+                      </div>
+                      <h3>
+                        <a
+                          href="https://exznpl.com"
+                          className="
+                             font-semibold
+                             text-xl
+                             sm:text-2xl
+                             lg:text-xl
+                             xl:text-2xl
+                             mb-4
+                             inline-block
+                             text-dark
+                             hover:text-primary"
+                        >
+                          募集のタイトルになる
+                        </a>
+                      </h3>
+                      <div className="flex justify-between">
+                        <div className="flex">
+                          <svg
+                            className="w-6 h-6"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+                            ></path>
+                          </svg>
+                          報酬詳細
+                        </div>
+                        <div className="flex">
+                          <svg
+                            className="w-6 h-6 text-red-600"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                            ></path>
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                            ></path>
+                          </svg>
+                          <span>都内d</span>
                         </div>
                       </div>
-                      <div>
-                        <div className="font-bold">Result with image</div>
-                        <div className="text-sm opacity-50">
-                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                          labore et dolore magna aliqua.
+                      <div className="mt-6 grid grid-cols-2">
+                        <div className="flex items-center">
+                          <div className="relative">
+                            <div className="h-6 w-6 rounded-full bg-gray-200 md:h-8 md:w-8"></div>
+                            <span className="bg-primary-red absolute top-0 right-0 inline-block h-3 w-3 rounded-full"></span>
+                          </div>
+
+                          <div className="ml-2">田中一郎</div>
+                        </div>
+
+                        <div className="flex justify-end">
+                          <Button size="sm">詳細</Button>
                         </div>
                       </div>
                     </div>
-                  </td>
-                </tr>
-                {/* <!-- row 2 --> */}
-                <tr>
-                  <td>
-                    <div className="flex items-center space-x-3">
-                      <div className="avatar">
-                        <div className="mask mask-squircle w-12 h-12">
-                          <a href="https://api.lorem.space/image/face?hash=92310"> </a>
-                        </div>
-                      </div>
-                      <div>
-                        <div className="font-bold">Brice Swyre</div>
-                        <div className="text-sm opacity-50 break-words">
-                          Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Massa sed elementum
-                          tempus egestas sed. Proin sagittis nisl rhoncus mattis rhoncus urna. Amet volutpat consequat
-                          mauris nunc congue nisi vitae suscipit tellus. Posuere urna nec tincidunt praesent semper.
-                          Elementum pulvinar etiam non quam lacus suspendisse.
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                {/* <!-- row 3 --> */}
-                <tr>
-                  <td>
-                    <div className="flex items-center space-x-3">
-                      <div>
-                        <div className="font-bold">Marjy Ferencz</div>
-                        <div className="text-sm opacity-50">
-                          Sodales ut etiam sit amet nisl purus in mollis nunc. Suspendisse potenti nullam ac tortor
-                          vitae purus. Eu mi bibendum neque egestas congue quisque egestas diam.
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-                {/* <!-- row 4 --> */}
-                <tr>
-                  <td>
-                    <div className="flex items-center space-x-3">
-                      <div className="avatar">
-                        <div className="mask mask-squircle w-12 h-12">
-                          <a href="https://api.lorem.space/image/face?hash=92310"> </a>
-                        </div>
-                      </div>
-                      <div>
-                        <div className="font-bold">Yancy Tear</div>
-                        <div className="text-sm opacity-50">
-                          Sagittis id consectetur purus ut faucibus pulvinar elementum integer. Massa sed elementum
-                          tempus egestas sed. Proin sagittis nisl rhoncus mattis rhoncus urna. Amet volutpat consequat
-                          mauris nunc congue nisi vitae suscipit tellus. Posuere urna nec tincidunt praesent semper.
-                          Elementum pulvinar etiam non quam lacus suspendisse.
-                        </div>
-                      </div>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
+                  </div>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

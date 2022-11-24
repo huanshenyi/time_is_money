@@ -1,3 +1,5 @@
+import { useEffect } from 'react';
+import { themeChange } from 'theme-change';
 import { Head } from '@/components/Head';
 
 type LayoutProps = {
@@ -6,6 +8,10 @@ type LayoutProps = {
 };
 
 export const Layout = ({ children, title = 'title info' }: LayoutProps) => {
+  useEffect(() => {
+    themeChange(false);
+  }, []);
+
   return (
     <>
       <Head title={title} description={title} />
@@ -67,6 +73,26 @@ export const Layout = ({ children, title = 'title info' }: LayoutProps) => {
                   </svg>
                 </button>
                 <button
+                  data-set-theme="garden"
+                  className="btn btn-sm btn-ghost btn-square"
+                  data-act-classname="btn-active"
+                >
+                  <svg
+                    className="inline-block w-4 h-4 fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"
+                    ></path>
+                  </svg>
+                </button>
+                <button
                   data-set-theme="dark"
                   className="btn btn-sm btn-ghost btn-square"
                   data-act-classname="btn-active"
@@ -80,6 +106,11 @@ export const Layout = ({ children, title = 'title info' }: LayoutProps) => {
                     <path d="M152.62,126.77c0-33,4.85-66.35,17.23-94.77C87.54,67.83,32,151.89,32,247.38,32,375.85,136.15,480,264.62,480c95.49,0,179.55-55.54,215.38-137.85-28.42,12.38-61.8,17.23-94.77,17.23C256.76,359.38,152.62,255.24,152.62,126.77Z"></path>
                   </svg>
                 </button>
+                <button
+                  data-set-theme="garden"
+                  className="btn btn-sm btn-ghost btn-square"
+                  data-act-classname="btn-active"
+                ></button>
               </div>
             </div>
           </div>
